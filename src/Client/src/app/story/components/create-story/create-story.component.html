@@ -1,0 +1,16 @@
+<div class="col col-sm-6 col-md-6" style="margin: 0 auto !important;">
+  <p class="h4 mb-4 mt-5 text-center">{{editMode? 'Review Story': 'Create Story'}}</p>
+  <br>
+  <form class="text-center border border-light p-5" [formGroup]="storyForm" (ngSubmit)='createStory()'>
+    <input type="text" id="title" formControlName="title" class="form-control mb-4" placeholder="Title">
+    <textarea rows="12" type="text" id="content" formControlName="content" class="form-control mb-4" placeholder="Content"></textarea>
+
+      <!-- <textarea *ngIf='editMode' rows="4" type="text" id="adminComment" formControlName="adminComment" class="form-control mb-4" placeholder="Admin comment"></textarea> -->
+      <!-- <mdb-checkbox formControlName='approve'>Approve</mdb-checkbox> -->
+      <!-- <div class="row" *ngIf='story'> -->
+      <button mdbBtn color="success" block="true" class="my-4" type="submit" [disabled]="!storyForm.valid">{{editMode? 'Update': 'Create'}} Story</button>
+    </form>
+</div>
+<br>
+<br>
+<br>

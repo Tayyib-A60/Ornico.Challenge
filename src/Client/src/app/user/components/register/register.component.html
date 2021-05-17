@@ -1,0 +1,24 @@
+<div class="col col-sm-6 col-md-4" style="margin: 0 auto !important;">
+    <p class="h4 mb-4 mt-5 text-center">Sign up</p>
+    <br>
+    <form class="text-center border border-light p-5" [formGroup]="registrationForm" (ngSubmit)='register()'>
+      <select formControlName='role' class="browser-default custom-select mb-4">
+        <option selected>Select Role</option>
+        <option value="1">Reader</option>
+        <option value="2">Author</option>
+      </select>
+        <input type="text" id="fullName" formControlName="fullName" class="form-control mb-4" placeholder="FullName">
+        <input type="email" id="emai;" formControlName="email" class="form-control mb-4" placeholder="E-mail">
+        <input type="twitter" id="twitter" formControlName="twitter" class="form-control mb-4" placeholder="Twitter">
+        <input type="instagram" id="instagram" formControlName="instagram" class="form-control mb-4" placeholder="Instagram">
+        <input type="password" id="password" formControlName="password" class="form-control mb-4" placeholder="Password">
+
+        <div class="d-flex justify-content-around">
+        </div>
+        <button mdbBtn color="info" block="true" class="my-4" type="submit"
+        [disabled]="!registrationForm.valid">Register</button>
+      </form>
+  </div>
+  <br>
+  <br>
+  <br>

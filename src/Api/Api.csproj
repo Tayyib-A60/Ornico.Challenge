@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>d6e72a05-1192-4238-9d93-d54a912e967f</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.Elasticsearch" Version="3.1.1" />
+		<PackageReference Include="AspNetCore.HealthChecks.Kafka" Version="3.1.2" />
+		<PackageReference Include="AspNetCore.HealthChecks.Publisher.Datadog" Version="3.1.1" />
+		<PackageReference Include="AspNetCore.HealthChecks.Redis" Version="3.1.1" />
+		<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.1.1" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+		<PackageReference Include="AutoMapper" Version="9.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Datadog.Trace" Version="1.25.0" />
+		<PackageReference Include="Elastic.Apm.AspNetCore" Version="1.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.10" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="Sentry.AspNetCore" Version="3.3.1" />
+		<PackageReference Include="Sentry.Protocol" Version="2.1.8" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+
+		<PackageReference Include="Autofac" Version="6.0.0" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.10" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.1.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+		<PackageReference Include="Sentry.Extensions.Logging" Version="3.3.1" />
+		<PackageReference Include="Sentry.Serilog" Version="2.1.8" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	  <ProjectReference Include="..\Migrations\Migrations.csproj" />
+	  <ProjectReference Include="..\Models\Models.csproj" />
+	  <ProjectReference Include="..\Service\Service.csproj" />
+	</ItemGroup>
+
+</Project>

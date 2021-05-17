@@ -1,0 +1,36 @@
+<header>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark red fixed-top scrolling-navbar">
+  <mdb-navbar-brand><a class="navbar-brand" style="margin-left:1.8rem !important;">Ornico</a></mdb-navbar-brand>
+  <links>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/register"
+              *ngIf="!isAuthenticated()">Register</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/login"
+              *ngIf="!isAuthenticated()">Login</a>
+          </li>
+          <li *ngIf='isAuthor()' class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/dashboard"
+              >Dashboard</a>
+          </li>
+          <li *ngIf='isAuthor()' class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/create-story"
+              >Create Story</a>
+          </li>
+          <li *ngIf='isAuthenticated()' class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect (click)='logout()'>Logout</a>
+          </li>
+          <li *ngIf='isAuthenticated()' class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/stories"
+              >Stories</a>
+          </li>
+          <li *ngIf='isAuthenticated() && !isVerified()' class="nav-item float-right" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect routerLink="/user/verify"
+              >Verify Account</a>
+          </li>
+         </ul>
+  </links>
+</mdb-navbar>
+</header>

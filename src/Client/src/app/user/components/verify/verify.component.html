@@ -1,0 +1,10 @@
+<br><br>
+<div class="row m-4 mt-6">
+  <br>
+  <form class="text-center border border-light p-5" >
+      <p class="h4 mb-4 mt-5 text-center">Please input the code</p>
+      <input type="text" id="code" name="code" required [(ngModel)]='code' class="form-control mb-4" placeholder="Verification code">
+      <button mdbBtn color="info" block="true" class="my-4" type="button" (click)='verify()'
+      >Verify</button>
+    </form>
+</div>
